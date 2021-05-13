@@ -1,21 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {BrowserRouter} from 'react-router-dom'
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Provider} from "react-redux";
 
+import "./index.css";
+import App from "./App";
 
-import reportWebVitals from './reportWebVitals';
+import store from './redux/store.js'
 
+import reportWebVitals from "./reportWebVitals";
+// Provider gives us access to the store and is the parent of everthing 
 ReactDOM.render(
- <BrowserRouter>
-   <App />
- </BrowserRouter>,
-  
+  <Provider store={store} > 
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
 
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
