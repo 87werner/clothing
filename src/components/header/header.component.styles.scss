@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     height: 70px;
     width: 100%;
     display: flex;
@@ -7,12 +8,13 @@
   
     .logo-container {
       height: 100%;
-      width: 70px;
+        width: 70%;
       padding: 25px;
       
     }
   
     .options {
+     
       width: 50%;
       height: 100%;
       display: flex;
@@ -21,6 +23,7 @@
 
   
       .option {
+        
         padding: 10px 15px;
         // text-decoration: none;
         // color: black;
